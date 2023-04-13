@@ -1,5 +1,7 @@
 package Database;
 
+import Model.Product;
+
 import java.sql.*;
 
 public class DB {
@@ -26,7 +28,7 @@ public class DB {
         }
     }
 
-    private Connection getConnect() {
+    public Connection getConnect() {
         String url = "jdbc:sqlite:/home/edo/Documents/Repository/PTDB_ProductToDatabase/PTDB_ProductToDB/src/Database/MyDB.db";
         Connection conn = null;
         try {
@@ -53,6 +55,7 @@ public class DB {
             System.out.println(e.getMessage());
         }
     }
+
 
     public static void main(String[] args) {
         DB db = new DB();
